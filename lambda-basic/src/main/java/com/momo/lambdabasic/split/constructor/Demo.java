@@ -23,11 +23,11 @@ public class Demo {
 	public void demo1() {
 		List<String> strList = Arrays.asList("a", "b", "c");
 		
-		Stream<Person> personStrem = strList.stream().map(str -> new Person(str));
-		List<Person> personList = personStrem.collect(Collectors.toList());
+		Stream<Person> personStream = strList.stream().map(str -> new Person(str));
+		List<Person> personList = personStream.collect(Collectors.toList());
 		
-		Stream<Person> personStrem2 = strList.stream().map(Person::new);
-		List<Person> personList2 = personStrem2.collect(Collectors.toList());
+		Stream<Person> personStream2 = strList.stream().map(Person::new);
+		List<Person> personList2 = personStream2.collect(Collectors.toList());
 	}
 	
 	// Integer[]::new 等价于 n -> new Integer[n]
